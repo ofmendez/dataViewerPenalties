@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/main.js" type="module" defer></script>
+    <title>Document</title>
+</head>
+<body  >
+        <div class="container">
+    <table class="responsive-table highlight " id="TablaUsuariosRegistrados" align="center" border="1">
+        <input id="command"> </input>
+        <br>
+        <button class="waves-effect waves-light btn" onclick="window.Reload()">Actualizar </button>
+        <button transparent > </button>
+        <button transparent > </button>
+        <button transparent > </button>
+        <button transparent > </button>
+        <button class="waves-effect waves-light btn" onclick="window.ToggleAll()">Contraer / Expandir </button>
+        <thead hidden id="titleTable">
+            <tr>
+                <th>Id</th>
+                <th>User</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Pais</th>
+                <th>Registros</th>
+                <th>Cargo</th>
+                <th>Compañía</th>
+                <!-- <th>Total</th> -->
+            </tr>
+        </thead>
+        <tbody id="t">
+        </tbody>
+    </table>
+        </div>
+
+</body>
+</html>
