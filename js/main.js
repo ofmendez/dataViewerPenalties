@@ -2,10 +2,14 @@ import {getUserData, DeleteUser} from "./database.js";
 import { ñ} from './utils.js'
 
 
-function Toggle(element) {
-    ñ(`.r-${element}`).forEach((n)=>{
+function Toggle(name, element) {
+    let s =false
+    ñ(`.r-${name}`).forEach((n)=>{
         n.hidden = !n.hidden;
+        s = n.hidden;
     })
+    element.classList.add(s?'sCollapsed':'sExpanded')
+    element.classList.remove(s?'sExpanded':'sCollapsed')
 }
 
 function updateTable(users, values, sValues) {
@@ -51,15 +55,16 @@ function updateTable(users, values, sValues) {
     tbody.insertAdjacentHTML("beforeend", p);
     users.forEach(user => {
         ñ(`.${user['uid']}`).forEach((n)=>{
-            n.addEventListener('click', ()=> Toggle(user['uid']) );
+            n.addEventListener('click', ()=> Toggle(user['uid'],n) );
         })
     });
-    window.ToggleAll();
+    window.ToggleAll('sCollapsed');
 }
 
-window.ToggleAll = ()=>{
+window.ToggleAll = (s)=>{
     ñ('.collapsable').forEach((el)=>{
-        el.click()
+        if (!el.classList.contains(s))
+            el.click()
     })
 }
 window.Reload = ()=>{
