@@ -73,6 +73,17 @@ export function updateScore(userId,reg, newScore, result) {
     });
 }
 
+export function updateMailed(userId,reg) {
+    return new Promise((resolve,reject)=>{
+        getDB().then((db)=>{
+            const updates = {};
+            updates['/users/' + userId+'/mailed-'+reg] = `disabled`;
+            update(ref(db), updates).then(()=> resolve("Updated!! ") );
+
+        }).catch((e)=> reject("error getDB: "+e))
+    });
+}
+
 export function DeleteUser(userId) {
     return new Promise((resolve,reject)=>{
         getDB().then((db)=>{

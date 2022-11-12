@@ -1,3 +1,28 @@
+html{
+	background-color: #f5f5f5 ;
+}
+
+#mainContainer{
+	min-height: calc(100vh - 134px);
+}
+
+.sExpanded::before ,.sCollapsed::before{
+	/* content: ''; */
+	position: absolute;
+	/* top: -10px;
+	right: -10px; */
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: yellow;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center; 
+	font-weight: bold;
+  	left: 0px;
+  	top: 1px;
+}
+
 
 /* Atributos  */
 [transparent] { visibility: hidden; } 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +9,53 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/materialize.min.js"></script>
     <script src="./js/main.js" type="module" defer></script>
+    <script src="./js/sweetalert2@11.js"></script>
     <title>Document</title>
 </head>
-<body  >
-        <div class="container">
-    <table class="responsive-table highlight " id="TablaUsuariosRegistrados" align="center" border="1">
-        <input id="command"> </input>
-        <br>
-        <button class="waves-effect waves-light btn" onclick="window.Reload()">Actualizar </button>
-        <button transparent > </button>
-        <button transparent > </button>
-        <button transparent > </button>
-        <button transparent > </button>
-        <button class="waves-effect waves-light btn" onclick="window.ToggleAll('sCollapsed')">Contraer Todo</button>
-        <button transparent > </button>
-        <button class="waves-effect waves-light btn" onclick="window.ToggleAll('sExpanded')"> Expandir Todo</button>
-        <thead hidden id="titleTable">
-            <tr>
-                <th>Id</th>
-                <th>User</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Pais</th>
-                <th>Registros</th>
-                <th>Cargo</th>
-                <th>Compañía</th>
-                <!-- <th>Total</th> -->
-            </tr>
-        </thead>
-        <tbody id="t">
-        </tbody>
-    </table>
-        </div>
 
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <div class="navbar-fixed">
+        
+        <div class="nav-wrapper">
+            <nav style="" class=" teal lighten-2">
+                <div   style="   overflow: hidden; white-space: nowrap;" class="container">
+                    <!-- <button onclick="window.Mark()" style=" display: inline-block; width: auto; overflow: hidden; white-space: nowrap; margin-right:10%; " class="waves-effect waves-light btn black-text white" >Actualizar </button> -->
+                    <button onclick="window.Reload()" style=" display: inline-block; width: auto; overflow: hidden; white-space: nowrap; margin-right:10%; " class="waves-effect waves-light btn black-text white" >Actualizar </button>
+                    <button onclick="window.ToggleAll('sCollapsed')" style=" display: inline-block; width: auto; overflow: hidden; white-space: nowrap;" class="waves-effect waves-light btn" >Contraer Todo</button>
+                    <button onclick="window.ToggleAll('sExpanded')" style=" display: inline-block; width: auto; overflow: hidden; white-space: nowrap;" class="waves-effect waves-light btn" > Expandir Todo</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="mainContainer" class="container">
+        <table class=" highlight " id="TablaUsuariosRegistrados" align="center" border="1">
+            <br>
+            <thead hidden id="titleTable">
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Pais</th>
+                    <th>Registros</th>
+                    <th>Cargo</th>
+                    <th>Compañía</th>
+                    <!-- <th>Total</th> -->
+                </tr>
+            </thead>
+            <tbody id="t">
+            </tbody>
+        </table>
+    </div>
+<footer class="page-footer teal">
+    
+    <div class="footer-copyright">
+        <div class="container">
+            © 2022
+            <a class="grey-text text-lighten-4 right" href="#!"> . . . </a>
+        </div>
+    </div>
+</footer>
 </body>
+
 </html>
