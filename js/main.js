@@ -43,7 +43,7 @@ function updateTable(users, values, sValues) {
             sValues.forEach(value => {
                 let info =user[`${value}${i}`]? user[`${value}${i}`].toString():""
                 if (value === "score-")
-                    subFila2 += "<td>" + (info.split('-')[0] !== ""?info.split('-')[0]:"-" ) + " / " + (info.split('-')[0] !== ""?(info.split('-')[1])/80:"-" ) + "</td>";
+                    subFila2 += "<td>" + (info.split('-')[0] !== ""?info.split('-')[0]:"-" ) + " / " + (info.split('-')[0] !== ""?(info.split('-')[1])/90:"-" ) + "</td>";
                 else if (value === "data-"){
                     passSt = info.split('-')[0];
                     subFila2 += "<td>" + (passSt !== "used"?passSt:"-" ) + "</td>"+"<td>" + (passSt !== "used"?info.split('-')[1]:"used" ) + "</td>";
